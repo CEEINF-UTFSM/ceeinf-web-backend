@@ -1,7 +1,7 @@
 from rest_framework import generics
 
 from apps.blog.models import Post
-from apps.blog_api.serializers import PostSerializer
+from .serializers import PostSerializer
 
 
 class PostList(generics.ListCreateAPIView):
