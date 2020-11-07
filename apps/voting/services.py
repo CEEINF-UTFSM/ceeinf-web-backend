@@ -20,7 +20,7 @@ def make_vote(user: "apps.user.User", poll: Poll, option: str) -> bool:
     """
     :param user:
     :param poll:
-    :return:
+    :return: status -> bool, returns if vote was created or not.
     First check if poll is still available.
     Then generate sign.
     At last save Vote referenced to the Poll.
@@ -35,4 +35,5 @@ def make_vote(user: "apps.user.User", poll: Poll, option: str) -> bool:
         vote.poll = Poll()
         vote.option = option
         vote.save()
+        status = True
     return status
