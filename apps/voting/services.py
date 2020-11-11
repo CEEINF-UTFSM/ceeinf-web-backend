@@ -27,7 +27,7 @@ def make_vote(user: "apps.user.User", poll: Poll, option: str) -> bool:
     """
     status = False
     starting_time = arrow.utcnow() # freeze time to avoid race conditions
-    if poll.start_time < starting_time < poll.end_time:
+    if poll.begin_time < starting_time < poll.end_time:
         logger.info(f"Creating valid Vote at {arrow.utcnow}")
         hash_value = hash_creation_for_votes(user=user)
         vote = Vote()
