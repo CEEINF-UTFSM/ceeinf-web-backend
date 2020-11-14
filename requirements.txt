@@ -1,5 +1,6 @@
 Django==3.0.8
 psycopg2==2.8.5
 djangorestframework==3.12.1
+arrow==0.17.0
 beautifulsoup4==4.9.2
 requests==2.24.0
